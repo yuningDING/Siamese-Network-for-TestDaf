@@ -345,10 +345,10 @@ for item_id in id_ft00  :
 
     validation_data = ([dev_a_vectors, dev_b_vectors,dev_c_vectors, dev_d_vectors ], dev_gold)
 
-    try:
-        siamese.fit(train_a_vectors, train_b_vectors, train_c_vectors, train_d_vectors, train_gold, validation_data, epochs=epochs)
-    except ValueError:
-        continue
+    #try:
+    siamese.fit(train_a_vectors, train_b_vectors, train_c_vectors, train_d_vectors, train_gold, validation_data, epochs=epochs)
+    #except ValueError:
+        #continue
 
 
     from sklearn.metrics import mean_squared_error
